@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 
 # 设定项目
-project(Textures)
+project(Transformations)
 message(STATUS "[Project] ${PROJECT_NAME}")
 
 # 修改默认的安装路径前缀
@@ -56,9 +56,6 @@ set(LIBS ${LIBS} STB_IMAGE)
 add_library(GLAD "src/glad.c")
 set(LIBS ${LIBS} GLAD)
 
-add_library(SHADER "src/shader.cpp")
-set(LIBS ${LIBS} SHADER)
-
 message(STATUS "----------")
 find_package(glfw3 REQUIRED)
 if(TARGET glfw)
@@ -68,11 +65,22 @@ endif()
 set(LIBS ${LIBS} glfw)
 
 add_executable(${PROJECT_NAME} "src/main.cpp")
-add_executable(${PROJECT_NAME}_ex2 "src/ex2.cpp")
-add_executable(${PROJECT_NAME}_ex3 "src/ex3.cpp")
-add_executable(${PROJECT_NAME}_ex4 "src/ex4.cpp")
 
 target_link_libraries(${PROJECT_NAME} ${LIBS})
-target_link_libraries(${PROJECT_NAME}_ex2 ${LIBS})
-target_link_libraries(${PROJECT_NAME}_ex3 ${LIBS})
-target_link_libraries(${PROJECT_NAME}_ex4 ${LIBS})
+
+#file GLOB 是一个通配符，可以匹配多个文件，类似于set
+file(GLOB SHADERS
+            "src/shaders/*.vs"
+            # "src/shaders/*.frag"
+            "src/shaders/*.fs"
+            "src/shaders/*.gs"
+	     	"src/shaders/*.cs"
+)
+
+foreach(SHADER ${SHADERS})
+        if(WIN32)
+            # configure_file(${SHADER} "test")
+			# 将文件复制到指定目录
+            add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SHADER} ${PROJECT_BINARY_DIR})
+        endif(WIN32)
+endforeach(SHADER)

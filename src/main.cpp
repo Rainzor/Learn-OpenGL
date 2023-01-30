@@ -1,9 +1,12 @@
 #define GLFW_INCLUDE_NONE
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
+#include <glad/glad.h>
+#include <learnopengl/shader.h>
 #include <stb_image.h>
-#include "shader.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
@@ -44,10 +47,7 @@ int main() {
 
     // build and compile our shader zprogram
     // ------------------------------------
-    //Shader ourShader("../shaders/texture.vs", "../shaders/texture.fs");
-
-    // ex1:修改片段着色器，仅让笑脸图案朝另一个方向看
-    Shader ourShader("../shaders/texture.vs", "../shaders/texture_ex1.fs");
+    Shader ourShader("shader.vs", "shader.fs");
 
     
     // set up vertex data (and buffer(s)) and configure vertex attributes
@@ -112,25 +112,9 @@ int main() {
     stbi_set_flip_vertically_on_load(true);  // tell stb_image.h to flip loaded texture's on the y-axis.
     // The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
 
-    // stbi_load 读取图片
-    // 参数1：图片路径
-    // 参数2：图片宽度
-    // 参数3：图片高度
-    // 参数4：图片通道数
-    // 参数5：希望读取的通道数，0表示读取所有通道
-    // 返回值：图片数据
     unsigned char* data = stbi_load("../resources/textures/container.jpg", &width, &height, &nrChannels, 0);
     if (data) {
-        // 创建纹理
-        // 参数1：纹理类型，这里是2D纹理
-        // 参数2：纹理层次，0表示基本图像级别
-        // 参数3：纹理储存格式
-        // 参数4：纹理宽度
-        // 参数5：纹理高度
-        // 参数6：总是0，历史遗留问题
-        // 参数7：源图的格式，这里是RGB
-        // 参数8：源图的数据类型，这里是无符号字节
-        // 参数9：图片数据
+
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
         // 生成多级渐远纹理，由于只有一张图片，所以只生成一级
         glGenerateMipmap(GL_TEXTURE_2D);
@@ -174,6 +158,7 @@ int main() {
     // 1号纹理单元
     ourShader.setInt("texture2", 1);
 
+
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window)) {
@@ -196,9 +181,20 @@ int main() {
     
         // render container
         ourShader.use();
+        glm::mat4 trans = glm::mat4(1.0f);
+        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+        ourShader.setMat4("transform",trans);
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
+        trans = glm::mat4(1.0f);
+        trans = glm::translate(trans, glm::vec3(-0.5f,0.5f,0.0f));
+        float sin_time = sin(glfwGetTime());
+        trans = glm::scale(trans, glm::vec3(sin_time, sin_time, sin_time));
+        ourShader.setMat4("transform", trans);
+        glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);

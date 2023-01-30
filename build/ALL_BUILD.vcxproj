@@ -177,29 +177,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{4DA4114E-DC6C-349A-A4AE-8695FDE0248D}</Project>
       <Name>GLAD</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\SHADER.vcxproj">
-      <Project>{D2B97521-36FE-37F5-B5A7-92F14B6A318E}</Project>
-      <Name>SHADER</Name>
-    </ProjectReference>
     <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\STB_IMAGE.vcxproj">
       <Project>{7D786810-E0B6-3CBA-93D3-E32D2DF6F532}</Project>
       <Name>STB_IMAGE</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Textures.vcxproj">
-      <Project>{BA60377C-8B3B-3370-8D1C-BED1F6DE6AC4}</Project>
-      <Name>Textures</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Textures_ex2.vcxproj">
-      <Project>{22D68F3D-B6BE-3085-BA4C-9AFA14DDD4D2}</Project>
-      <Name>Textures_ex2</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Textures_ex3.vcxproj">
-      <Project>{E59631AA-C423-39D9-BB43-1824BE174EBC}</Project>
-      <Name>Textures_ex3</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Textures_ex4.vcxproj">
-      <Project>{CAEAA8D1-0287-37C7-AD79-5014FEE6E247}</Project>
-      <Name>Textures_ex4</Name>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Transformations.vcxproj">
+      <Project>{6D54E69B-B9E4-3767-829C-1E3CEB0B831F}</Project>
+      <Name>Transformations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
