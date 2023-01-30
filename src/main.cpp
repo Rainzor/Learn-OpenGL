@@ -20,6 +20,10 @@ int main() {
      glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
      glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+ #ifdef __APPLE__
+     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+ #endif
+
      // glfw window creation
      // --------------------
      GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
@@ -43,6 +47,13 @@ int main() {
      // main.cpp
      Shader ourShader("..\\shaders\\shader.vs", "..\\shaders\\shader.fs");  // you can name your shader files however you like
 
+     // exercise1:修改顶点着色器让三角形上下颠倒
+     //Shader ourShader("..\\shaders\\shader_ex1.vs", "..\\shaders\\shader.fs");
+
+     // exercise2:使用uniform定义一个水平偏移量，在顶点着色器中使用这个偏移量把三角形移动到屏幕右侧
+     //Shader ourShader("..\\shaders\\shader_ex2.vs", "..\\shaders\\shader.fs");
+
+     //Shader ourShader("..\\shaders\\shader_ex3.vs", "..\\shaders\\shader.fs");
      // set up vertex data (and buffer(s)) and configure vertex attributes
      // ------------------------------------------------------------------
      // 更多属性 位置+颜色
@@ -99,6 +110,7 @@ int main() {
          // shader
          // ------
          ourShader.use();
+         ourShader.setFloat("offset_x", 0.5f);//exercise2
 
          // render the triangle
          glBindVertexArray(VAO);//绑定VAO
