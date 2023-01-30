@@ -68,6 +68,11 @@ endif()
 set(LIBS ${LIBS} glfw)
 
 add_executable(${PROJECT_NAME} "src/main.cpp")
-
+add_executable(${PROJECT_NAME}_ex2 "src/ex2.cpp")
+add_executable(${PROJECT_NAME}_ex3 "src/ex3.cpp")
+add_executable(${PROJECT_NAME}_ex4 "src/ex4.cpp")
 
 target_link_libraries(${PROJECT_NAME} ${LIBS})
+target_link_libraries(${PROJECT_NAME}_ex2 ${LIBS})
+target_link_libraries(${PROJECT_NAME}_ex3 ${LIBS})
+target_link_libraries(${PROJECT_NAME}_ex4 ${LIBS})

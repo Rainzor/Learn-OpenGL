@@ -2,5 +2,8 @@ D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/STB_IMAGE.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/GLAD.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/SHADER.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/Textures.dir
+D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/Textures_ex2.dir
+D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/Textures_ex3.dir
+D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/Textures_ex4.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/ALL_BUILD.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/ZERO_CHECK.dir
