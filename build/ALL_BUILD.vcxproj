@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6BAAB268-F01B-3173-BB0F-C495E03C251F}</ProjectGuid>
+    <ProjectGuid>{AA58F754-7EDD-3402-A8D1-156D6E71B878}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -69,7 +69,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerScience\cs_2023_Winter_LearnOpenGL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -79,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerScience\cs_2023_Winter_LearnOpenGL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -89,7 +89,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerScience\cs_2023_Winter_LearnOpenGL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ComputerScience\cs_2023_Winter_LearnOpenGL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\CMakeLists.txt">
+    <CustomBuild Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/ComputerScience/cs_2023_Winter_LearnOpenGL/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl -BD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build --check-stamp-file D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build/CMakeFiles/generate.stamp
+D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_2023_Winter_LearnOpenGL -BD:/ComputerScience/cs_2023_Winter_LearnOpenGL/build --check-stamp-file D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/ComputerScience/cs_2023_Winter_LearnOpenGL/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl -BD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build --check-stamp-file D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build/CMakeFiles/generate.stamp
+D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_2023_Winter_LearnOpenGL -BD:/ComputerScience/cs_2023_Winter_LearnOpenGL/build --check-stamp-file D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/ComputerScience/cs_2023_Winter_LearnOpenGL/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl -BD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build --check-stamp-file D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build/CMakeFiles/generate.stamp
+D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_2023_Winter_LearnOpenGL -BD:/ComputerScience/cs_2023_Winter_LearnOpenGL/build --check-stamp-file D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/ComputerScience/cs_2023_Winter_LearnOpenGL/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl -BD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build --check-stamp-file D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build/CMakeFiles/generate.stamp
+D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_2023_Winter_LearnOpenGL -BD:/ComputerScience/cs_2023_Winter_LearnOpenGL/build --check-stamp-file D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,43 +159,35 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeFindDependencyMacro.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Config.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3ConfigVersion.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets-debug.cmake;D:\ComputerScience\cpp_lib\GLFW\lib\cmake\glfw3\glfw3Targets.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\ZERO_CHECK.vcxproj">
-      <Project>{F2656921-8EA9-36DB-A28A-E5B18959180D}</Project>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\ZERO_CHECK.vcxproj">
+      <Project>{22DE4627-F051-3283-BE76-FFA9880600EE}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\GLAD.vcxproj">
-      <Project>{B36A67C8-CA3F-3C4C-A4B8-4A774B82D033}</Project>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\GLAD.vcxproj">
+      <Project>{4DA4114E-DC6C-349A-A4AE-8695FDE0248D}</Project>
       <Name>GLAD</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\Hello_OpenGL.vcxproj">
-      <Project>{CB26CAE2-A3EA-31EC-A805-D4870129E2BF}</Project>
-      <Name>Hello_OpenGL</Name>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\SHADER.vcxproj">
+      <Project>{D2B97521-36FE-37F5-B5A7-92F14B6A318E}</Project>
+      <Name>SHADER</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\Hello_OpenGL_ex1.vcxproj">
-      <Project>{111DB833-6D7A-326A-9209-0DECF4A798AF}</Project>
-      <Name>Hello_OpenGL_ex1</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\Hello_OpenGL_ex2.vcxproj">
-      <Project>{FF0B2015-E15D-3123-97E6-3AA437EA8864}</Project>
-      <Name>Hello_OpenGL_ex2</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\Hello_OpenGL_ex3.vcxproj">
-      <Project>{A4255056-8031-3B25-858F-ACF85331EEEA}</Project>
-      <Name>Hello_OpenGL_ex3</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\STB_IMAGE.vcxproj">
-      <Project>{D3AFAB4B-AFF3-3102-88CF-735C75D5DC0E}</Project>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\STB_IMAGE.vcxproj">
+      <Project>{7D786810-E0B6-3CBA-93D3-E32D2DF6F532}</Project>
       <Name>STB_IMAGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Shaders.vcxproj">
+      <Project>{3716A33C-C4C8-3D5F-BE6D-CA85B7565A2D}</Project>
+      <Name>Shaders</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
