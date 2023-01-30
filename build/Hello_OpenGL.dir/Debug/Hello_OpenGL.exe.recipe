@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\ComputerScience\cs_CG\USTC_CG\Homeworks\8_Shader\hello_opengl\bin\Hello_OpenGL.exe</FullPath>
+      <FullPath>D:\ComputerScience\cs_2023_Winter_LearnOpenGL\bin\Hello_OpenGL.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

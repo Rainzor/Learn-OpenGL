@@ -1,8 +1,8 @@
-# Install script for directory: D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl
+# Install script for directory: D:/ComputerScience/cs_2023_Winter_LearnOpenGL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl")
+  set(CMAKE_INSTALL_PREFIX "D:/ComputerScience/cs_2023_Winter_LearnOpenGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

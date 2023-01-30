@@ -1,6 +1,6 @@
-^D:\COMPUTERSCIENCE\CS_CG\USTC_CG\HOMEWORKS\8_SHADER\HELLO_OPENGL\CMAKELISTS.TXT
+^D:\COMPUTERSCIENCE\CS_2023_WINTER_LEARNOPENGL\CMAKELISTS.TXT
 setlocal
-D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl -BD:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build --check-stamp-file D:/ComputerScience/cs_CG/USTC_CG/Homeworks/8_Shader/hello_opengl/build/CMakeFiles/generate.stamp
+D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_2023_Winter_LearnOpenGL -BD:/ComputerScience/cs_2023_Winter_LearnOpenGL/build --check-stamp-file D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
