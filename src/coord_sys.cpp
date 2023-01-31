@@ -11,8 +11,7 @@
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
-
+void processInput(GLFWwindow* window, glm::vec3&);
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
@@ -205,12 +204,13 @@ int main() {
           glm::vec3(1.5f,  0.2f, -1.5f),
           glm::vec3(-1.3f,  1.0f, -1.5f)
     };
+    glm::vec3 offset = glm::vec3(0.0f, 0.0f, -3.0f);
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window)) {
         // input
         // -----
-        processInput(window);
+        processInput(window, offset);
 
         // render
         // ------
@@ -232,25 +232,45 @@ int main() {
         glm::mat4 projection = glm::mat4(1.0f);
 
         //  将顶点坐标变换到世界坐标系
-        model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+        //model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
         //model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
         //  将世界坐标系变换到观察坐标系
-        view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+        view = glm::translate(view, offset);
         //  将观察坐标系变换到裁剪坐标系
         // 参数1：视角，参数2：宽高比，参数3：近平面，参数4：远平面
-        projection = glm::perspective(glm::radians(30.0f), (float)SCR_WIDTH / SCR_HEIGHT, 0.1f, 100.0f);
+        projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / SCR_HEIGHT, 0.1f, 100.0f);
 
-        //三种设置uniform变量的方式
-        unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
-        unsigned int viewLoc = glGetUniformLocation(ourShader.ID, "view");
-        // pass them to the shaders (3 different ways)
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
-        // note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
+        ourShader.setMat4("view", view);
         ourShader.setMat4("projection", projection);
+        //三种设置uniform变量的方式
+        // unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
+        // unsigned int viewLoc = glGetUniformLocation(ourShader.ID, "view");
+        // // pass them to the shaders (3 different ways)
+        // glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        // glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
+        // // note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
+        // ourShader.setMat4("projection", projection);
+        // glBindVertexArray(VAO);
+        // glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
+        // render boxes
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        for (unsigned int i = 0; i < 10; i++) {
+            // calculate the model matrix for each object and pass it to shader before drawing
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, cubePositions[i]);
+            float angle = 20.0f * i;
+            if (i % 3 == 0) {
+                model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
+            }
+            else {
+                model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+            }
+            ourShader.setMat4("model", model);
+
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
@@ -272,9 +292,21 @@ int main() {
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
-void processInput(GLFWwindow* window) {
+void processInput(GLFWwindow* window, glm::vec3 & offset) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+    else if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        offset.z -= 0.01f;
+    else if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        offset.z += 0.01f;
+    else if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        offset.x -= 0.01f;
+    else if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        offset.x += 0.01f;
+    else if(glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+        offset.y += 0.01f;
+    else if(glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
+        offset.y -= 0.01f;
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
