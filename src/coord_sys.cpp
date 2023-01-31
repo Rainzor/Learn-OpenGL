@@ -11,10 +11,29 @@
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window, glm::vec3&);
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset); 
+void processInput(GLFWwindow* window);
+
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
+
+glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
+
+float pitch = 0.0f;//俯仰角
+float yaw = -90.0f;//偏航角
+
+float deltaTime = 0.0f;  // 当前帧与上一帧的时间差
+float lastFrame = 0.0f;  // 上一帧的时间
+
+float lastX = 400, lastY = 300;//鼠标位置
+bool firstMouse = true;
+
+float fov = 45.0f; //视角大小
+
 
 int main() {
     // glfw: initialize and configure
@@ -36,8 +55,17 @@ int main() {
         glfwTerminate();
         return -1;
     }
+    
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+    // tell GLFW to capture our mouse
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    // register our mouse callback function
+    glfwSetCursorPosCallback(window, mouse_callback);
+
+    // register mouse scroll callback function
+    glfwSetScrollCallback(window, scroll_callback);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -204,14 +232,15 @@ int main() {
           glm::vec3(1.5f,  0.2f, -1.5f),
           glm::vec3(-1.3f,  1.0f, -1.5f)
     };
-    glm::vec3 offset = glm::vec3(0.0f, 0.0f, -3.0f);
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window)) {
         // input
         // -----
-        processInput(window, offset);
-
+        processInput(window);
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
         // render
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -230,15 +259,11 @@ int main() {
         glm::mat4 model = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
         glm::mat4 view = glm::mat4(1.0f);
         glm::mat4 projection = glm::mat4(1.0f);
-
-        //  将顶点坐标变换到世界坐标系
-        //model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f));
-        //model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-        //  将世界坐标系变换到观察坐标系
-        view = glm::translate(view, offset);
-        //  将观察坐标系变换到裁剪坐标系
+        // 参数1：摄像机位置，参数2：目标位置，参数3：摄像机上方向
+        // 用来设置观察矩阵
+        view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         // 参数1：视角，参数2：宽高比，参数3：近平面，参数4：远平面
-        projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / SCR_HEIGHT, 0.1f, 100.0f);
+        projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / SCR_HEIGHT, 0.1f, 100.0f);
 
         ourShader.setMat4("view", view);
         ourShader.setMat4("projection", projection);
@@ -292,21 +317,19 @@ int main() {
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
-void processInput(GLFWwindow* window, glm::vec3 & offset) {
+void processInput(GLFWwindow* window) {
+    float cameraSpeed = 2.5f * deltaTime;//根据帧数计算相机移动速度
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
-    else if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        offset.z -= 0.01f;
-    else if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        offset.z += 0.01f;
-    else if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        offset.x -= 0.01f;
-    else if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        offset.x += 0.01f;
-    else if(glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
-        offset.y += 0.01f;
-    else if(glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
-        offset.y -= 0.01f;
+        
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        cameraPos += cameraSpeed * cameraFront;
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        cameraPos -= cameraSpeed * cameraFront;
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -315,4 +338,57 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+}
+
+// glfw: whenever the mouse moves, this callback is called
+// parameters are the window the callback belongs to and the cursor position
+// -------------------------------------------------------
+void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
+    // 这个问题产生的原因是，在你的鼠标移动进窗口的那一刻，鼠标回调函数就会被调用，
+    //这时候的xpos和ypos会等于鼠标刚刚进入屏幕的那个位置。这通常是一个距离屏幕中心很远的地方，因而产生一个很大的偏移量，
+    //所以就会跳了。我们可以简单的使用一个bool变量检验我们是否是第一次获取鼠标输入，
+    //如果是，那么我们先把鼠标的初始位置更新为xpos和ypos值，这样就能解决这个问题
+    if (firstMouse) {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+
+    float xoffset = xpos - lastX;
+    float yoffset = lastY - ypos;  // 注意这里是相反的，因为pitch是相对与y轴的夹角，与鼠标的移动方向相反
+
+    lastX = xpos;
+    lastY = ypos;
+
+    float sensitivity = 0.05f; // change this value to your liking
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+
+    yaw += xoffset;
+    pitch += yoffset;
+
+    // make sure that when pitch is out of bounds, screen doesn't get flipped
+    if (pitch > 89.0f)
+        pitch = 89.0f;
+    if (pitch < -89.0f)
+        pitch = -89.0f;
+
+    glm::vec3 front;
+    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    front.y = sin(glm::radians(pitch));
+    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+    cameraFront = glm::normalize(front);
+}
+/*
+当滚动鼠标滚轮的时候，yoffset值代表我们竖直滚动的大小。
+当scroll_callback函数被调用后，我们改变全局变量fov变量的内容。
+因为45.0f是默认的视野值，我们将会把缩放级别(Zoom Level)限制在1.0f到45.0f。
+*/
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
+    if (fov >= 1.0f && fov <= 45.0f)
+        fov -= yoffset;
+    if (fov <= 1.0f)
+        fov = 1.0f;
+    if (fov >= 45.0f)
+        fov = 45.0f;
 }
