@@ -65,8 +65,10 @@ endif()
 set(LIBS ${LIBS} glfw)
 
 add_executable(${PROJECT_NAME} "src/main.cpp")
+add_executable(CoordinateSystems "src/coord_sys.cpp")
 
 target_link_libraries(${PROJECT_NAME} ${LIBS})
+target_link_libraries(CoordinateSystems ${LIBS})
 
 #file GLOB 是一个通配符，可以匹配多个文件，类似于set
 file(GLOB SHADERS

@@ -117,7 +117,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PreBuildEvent>
-      <Message>	</Message>
+      <Message>		</Message>
       <Command>setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.fs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
@@ -129,6 +129,15 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader_coord.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -184,7 +193,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PreBuildEvent>
-      <Message>	</Message>
+      <Message>		</Message>
       <Command>setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.fs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
@@ -196,6 +205,15 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader_coord.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -251,7 +269,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PreBuildEvent>
-      <Message>	</Message>
+      <Message>		</Message>
       <Command>setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.fs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
@@ -263,6 +281,15 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader_coord.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -317,7 +344,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PreBuildEvent>
-      <Message>	</Message>
+      <Message>		</Message>
       <Command>setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.fs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
@@ -329,6 +356,15 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
 D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\CMake\bin\cmake.exe -E copy D:/ComputerScience/cs_2023_Winter_LearnOpenGL/src/shaders/shader_coord.vs D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone

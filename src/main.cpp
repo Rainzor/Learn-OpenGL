@@ -151,10 +151,7 @@ int main() {
     ourShader.use(); 
     // 使用glUniform1i设置每个采样器的方式告诉OpenGL每个着色器采样器属于哪个纹理单元
     // 设置纹理单元，这里是0号纹理单元（默认），也就是GL_TEXTURE0，系统默认会把纹理绑定到0号纹理单元，这里手动设置一下
-    // either set it manually like so:
-    glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0);
-    // or set it via the texture class
-    // ourShader.setInt("texture1", 0);
+     ourShader.setInt("texture1", 0);
     // 1号纹理单元
     ourShader.setInt("texture2", 1);
 

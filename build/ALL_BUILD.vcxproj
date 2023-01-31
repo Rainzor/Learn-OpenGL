@@ -173,6 +173,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CoordinateSystems.vcxproj">
+      <Project>{A6B7285C-F860-361B-AD37-5B0F14241F00}</Project>
+      <Name>CoordinateSystems</Name>
+    </ProjectReference>
     <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\GLAD.vcxproj">
       <Project>{4DA4114E-DC6C-349A-A4AE-8695FDE0248D}</Project>
       <Name>GLAD</Name>
