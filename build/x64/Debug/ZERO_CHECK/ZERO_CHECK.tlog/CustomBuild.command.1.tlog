@@ -1,6 +1,6 @@
 ^D:\COMPUTERSCIENCE\CS_2023_WINTER_LEARNOPENGL\BUILD\CMAKEFILES\C7D5FC1C43CD642072BE394D812636F5\GENERATE.STAMP.RULE
 setlocal
-D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_2023_Winter_LearnOpenGL -BD:/ComputerScience/cs_2023_Winter_LearnOpenGL/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/Transformations.sln
+D:\CMake\bin\cmake.exe -SD:/ComputerScience/cs_2023_Winter_LearnOpenGL -BD:/ComputerScience/cs_2023_Winter_LearnOpenGL/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/Framebuffers.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

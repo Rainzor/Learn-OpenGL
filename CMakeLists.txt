@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 
 # 设定项目
-project(Transformations)
+project(Framebuffers)
 message(STATUS "[Project] ${PROJECT_NAME}")
 
 # 修改默认的安装路径前缀
@@ -65,18 +65,16 @@ endif()
 set(LIBS ${LIBS} glfw)
 
 add_executable(${PROJECT_NAME} "src/main.cpp")
-add_executable(CoordinateSystems "src/coord_sys.cpp")
 
 target_link_libraries(${PROJECT_NAME} ${LIBS})
-target_link_libraries(CoordinateSystems ${LIBS})
 
 #file GLOB 是一个通配符，可以匹配多个文件，类似于set
 file(GLOB SHADERS
-            "src/shaders/*.vs"
+            "shaders/*.vs"
             # "src/shaders/*.frag"
-            "src/shaders/*.fs"
-            "src/shaders/*.gs"
-	     	"src/shaders/*.cs"
+            "shaders/*.fs"
+            "shaders/*.gs"
+	     	"shaders/*.cs"
 )
 
 foreach(SHADER ${SHADERS})

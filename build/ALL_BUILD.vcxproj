@@ -173,9 +173,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CoordinateSystems.vcxproj">
-      <Project>{A6B7285C-F860-361B-AD37-5B0F14241F00}</Project>
-      <Name>CoordinateSystems</Name>
+    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Framebuffers.vcxproj">
+      <Project>{7DEBC474-B05E-3E79-A2D3-B92FE0706ED1}</Project>
+      <Name>Framebuffers</Name>
     </ProjectReference>
     <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\GLAD.vcxproj">
       <Project>{4DA4114E-DC6C-349A-A4AE-8695FDE0248D}</Project>
@@ -184,10 +184,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\STB_IMAGE.vcxproj">
       <Project>{7D786810-E0B6-3CBA-93D3-E32D2DF6F532}</Project>
       <Name>STB_IMAGE</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\Transformations.vcxproj">
-      <Project>{6D54E69B-B9E4-3767-829C-1E3CEB0B831F}</Project>
-      <Name>Transformations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

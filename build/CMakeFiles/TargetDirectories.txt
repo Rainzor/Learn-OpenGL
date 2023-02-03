@@ -1,6 +1,5 @@
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/STB_IMAGE.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/GLAD.dir
-D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/Transformations.dir
-D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/CoordinateSystems.dir
+D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/Framebuffers.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/ALL_BUILD.dir
 D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/ZERO_CHECK.dir
