@@ -127,11 +127,9 @@ int main() {
         0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
         0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
         -0.5f, 0.5f, 0.5f, 0.0f, 0.0f,
-        -0.5f, 0.5f, -0.5f, 0.0f, 1.0f};
-    unsigned int indices[] = {
-        0, 1, 3,  // first triangle
-        1, 2, 3   // second triangle
+        -0.5f, 0.5f, -0.5f, 0.0f, 1.0f
     };
+
     unsigned int VBO, VAO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -180,6 +178,7 @@ int main() {
 
     unsigned char* data = stbi_load("../resources/textures/container.jpg", &width, &height, &nrChannels, 0);
     if (data) {
+        // 读取纹理数据
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
         // 生成多级渐远纹理，由于只有一张图片，所以只生成一级
         glGenerateMipmap(GL_TEXTURE_2D);
