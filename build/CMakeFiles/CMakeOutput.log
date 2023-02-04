@@ -7,7 +7,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.4.1+9a89d02ff for .NET Framework
-生成启动时间为 03/02/2023 4:12:16 pm。
+生成启动时间为 04/02/2023 2:54:20 pm。
 节点 1 上的项目“D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CompilerIdC\CompilerIdC.vcxproj”(默认目标)。
 PrepareForBuild:
   正在创建目录“Debug\”。
@@ -33,7 +33,7 @@ FinalizeBuildStatus:
     0 个警告
     0 个错误
 
-已用时间 00:00:01.43
+已用时间 00:00:00.90
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -50,7 +50,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.4.1+9a89d02ff for .NET Framework
-生成启动时间为 03/02/2023 4:12:18 pm。
+生成启动时间为 04/02/2023 2:54:21 pm。
 节点 1 上的项目“D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\3.24.1\CompilerIdCXX\CompilerIdCXX.vcxproj”(默认目标)。
 PrepareForBuild:
   正在创建目录“Debug\”。
@@ -76,7 +76,7 @@ FinalizeBuildStatus:
     0 个警告
     0 个错误
 
-已用时间 00:00:01.31
+已用时间 00:00:00.67
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -88,24 +88,24 @@ The CXX compiler identification is MSVC, found in "D:/ComputerScience/cs_2023_Wi
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_7de71.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_51fe8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
   用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.34.31937 版
-  版权所有(C) Microsoft Corporation。保留所有权利。
   CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7de71.dir\Debug\\" /Fd"cmTC_7de71.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\CMake\share\cmake-3.24\Modules\CMakeCCompilerABI.c"
-  cmTC_7de71.vcxproj -> D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_7de71.exe
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_51fe8.dir\Debug\\" /Fd"cmTC_51fe8.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\CMake\share\cmake-3.24\Modules\CMakeCCompilerABI.c"
+  cmTC_51fe8.vcxproj -> D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_51fe8.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: D:/ComputerScience/cs_2023_Winter_LearnOpenGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_652ef.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_3b02e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
   用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.34.31937 版
   版权所有(C) Microsoft Corporation。保留所有权利。
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_652ef.dir\Debug\\" /Fd"cmTC_652ef.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\CMake\share\cmake-3.24\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_652ef.vcxproj -> D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_652ef.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_3b02e.dir\Debug\\" /Fd"cmTC_3b02e.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\CMake\share\cmake-3.24\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_3b02e.vcxproj -> D:\ComputerScience\cs_2023_Winter_LearnOpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_3b02e.exe
 
 
 
