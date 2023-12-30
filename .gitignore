@@ -1,0 +1,12 @@
+.idea
+.vs
+*.exe
+*.o
+*.zip
+cmake-build-debug
+Debug
+Release
+build
+Lec
+Ans
+__pycache__

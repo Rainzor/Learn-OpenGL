@@ -1,4 +1,0 @@
-﻿  Building Custom Rule D:/ComputerScience/cs_2023_Winter_LearnOpenGL/CMakeLists.txt
-  shader.cpp
-D:\ComputerScience\cs_2023_Winter_LearnOpenGL\include\shader.h(4,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
-  SHADER.vcxproj -> D:\ComputerScience\cs_2023_Winter_LearnOpenGL\lib\SHADERd.lib
