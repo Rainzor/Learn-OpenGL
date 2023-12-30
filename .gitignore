@@ -1,12 +1,14 @@
 .idea
 .vs
+.vscode
 *.exe
 *.o
-
+*.zip
+build
+bin
 cmake-build-debug
 Debug
 Release
-build
 Lec
 Ans
 __pycache__
