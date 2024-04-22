@@ -212,9 +212,11 @@ int main() {
 
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
+    // VAO 的解绑
     glBindVertexArray(0);
 
     // uncomment this call to draw in wireframe polygons.（线绘制）
+    // 配置绘制方法
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
     // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
