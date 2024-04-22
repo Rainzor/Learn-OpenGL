@@ -208,6 +208,9 @@ int main() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
     // remember: do NOT unbind the EBO while a VAO is active as the bound element buffer object IS stored in the VAO; keep the EBO bound.
+    // 这里不用解绑ELEMENT，因为顶点数组对象VOA也跟踪元素缓冲区对象绑定EBO。
+    // 在绑定VAO时，绑定的最后一个元素缓冲区对象存储为VAO的元素缓冲区对象。
+    // 然后，绑定到VAO也会自动绑定该EBO, 解绑时同理 
     // glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
@@ -240,6 +243,8 @@ int main() {
         // 调用glUseProgram函数，用程序对象作为它的参数，以激活这个程序对象
         // 在glUseProgram函数调用之后，每个着色器调用和渲染调用都会使用这个程序对象
         glUseProgram(shaderProgram);
+
+	// 因为VAO自动绑定EBO，所以调用glBindVertexArray时，会调用glBindBuffer的函数，调用ElementBuffer绑定
         glBindVertexArray(VAO);  // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 
         /*glDrawElements函数
