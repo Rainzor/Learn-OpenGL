@@ -200,8 +200,6 @@ int main() {
     // 参数5：步长，连续的顶点属性组之间的间隔
     // 参数6：偏移量，该位置数据在缓冲buffer中起始位置的偏移量
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    // 启用顶点属性，顶点属性默认是禁用的
     glEnableVertexAttribArray(0);
 
     // note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
