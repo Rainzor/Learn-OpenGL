@@ -174,6 +174,8 @@ int main() {
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     // 绑定VAO，之后绑定和配置VBO和属性指针，最后解绑VAO供之后使用(实际不解绑也可以)
     // 从VAO绑定到解绑定之间的部分，即是该VAO索引的顶点属性区域
+    // VAO（Vertex Array Object）是指顶点数组对象，主要用于管理 VBO 或 EBO ，
+    // 减少 glBindBuffer 、glEnableVertexAttribArray、 glVertexAttribPointer 这些调用操作，高效地实现在顶点数组配置之间切换。
     glBindVertexArray(VAO);
 
     // 绑定对象至状态机的上下文(context)
